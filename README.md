@@ -1,73 +1,116 @@
-# React + TypeScript + Vite
+# Mercabuena 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Supermercado online desarrollado como proyecto final de prácticas en Corner Studios. Aplicación fullstack con React + TypeScript + Tailwind en el frontend y Node.js + Express en el backend.
 
-Currently, two official plugins are available:
+## 🌐 URLs del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend:** _(añadir URL de Vercel aquí)_
+- **Backend API:** _(añadir URL de Vercel aquí)_
 
-## React Compiler
+## 📋 Tablero Trello
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://trello.com/b/k13NX7bf/mi-tablero-de-trello
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🏠 Página de inicio con hero y productos destacados
+- 📦 Catálogo completo de productos
+- 🔍 Buscador de productos en tiempo real
+- 🏷️ Filtro por categorías
+- 📄 Página de detalle de cada producto
+- 🛍️ Carrito de la compra con gestión de cantidades
+- 📱 Diseño responsive (móvil y escritorio)
+- ❌ Página 404 personalizada
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologías
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Frontend:**
+- React 19 + TypeScript
+- Tailwind CSS
+- React Router
+- Context API
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Backend:**
+- Node.js + Express
+- Arquitectura por capas (routes, controllers, services)
+
+**Despliegue:**
+- Vercel
+
+## 📁 Estructura del proyecto
+
+```
+inventory-app/
+├── src/
+│   ├── api/          # Cliente de API tipado
+│   ├── components/   # Componentes reutilizables
+│   ├── context/      # Context API (carrito)
+│   ├── hooks/        # Custom hooks
+│   ├── pages/        # Páginas de la aplicación
+│   ├── types/        # Tipos TypeScript
+│   └── utils/        # Utilidades
+├── server/
+│   └── src/
+│       ├── controllers/
+│       ├── routes/
+│       └── services/
+└── docs/             # Documentación completa
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Cómo ejecutarlo en local
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clona el repositorio:
+```bash
+git clone https://github.com/nosequeponer-hash/inventory-app.git
+cd inventory-app
 ```
+
+2. Instala dependencias del frontend:
+```bash
+npm install
+```
+
+3. Instala dependencias del backend:
+```bash
+cd server
+npm install
+```
+
+4. Crea el archivo `server/.env`:
+```
+PORT=3000
+```
+
+5. Arranca el backend:
+```bash
+cd server
+npm run dev
+```
+
+6. Arranca el frontend (en otra terminal):
+```bash
+npm run dev
+```
+
+7. Abre `http://localhost:5173/`
+
+## 📚 Documentación
+
+Toda la documentación técnica está en la carpeta `docs/`:
+
+| Archivo | Contenido |
+|---------|-----------|
+| `agile.md` | Metodologías ágiles |
+| `idea.md` | Descripción del proyecto |
+| `project-management.md` | Organización con Trello |
+| `design.md` | Arquitectura y diseño |
+| `components.md` | Documentación de componentes |
+| `hooks.md` | Documentación de hooks |
+| `context.md` | Documentación del contexto |
+| `routing.md` | Estructura de rutas |
+| `forms.md` | Formularios |
+| `api.md` | Endpoints de la API |
+| `api-client.md` | Capa de red y tipos |
+| `testing.md` | Pruebas manuales |
+| `deployment.md` | Proceso de despliegue |
+| `retrospective.md` | Reflexión final |
