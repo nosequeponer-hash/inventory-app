@@ -4,8 +4,8 @@ Supermercado online desarrollado como proyecto final de prácticas en Corner Stu
 
 ## 🌐 URLs del proyecto
 
-- **Frontend:** _(añadir URL de Vercel aquí)_
-- **Backend API:** _(añadir URL de Vercel aquí)_
+- **Frontend:** https://inventory-app-4e2s.vercel.app/
+- **Backend API:** https://inventory-app-peach-one.vercel.app/
 
 ## 📋 Tablero Trello
 
