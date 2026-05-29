@@ -1,6 +1,4 @@
 // src/pages/Carrito.tsx
-// Página del carrito de la compra.
-
 import { Link } from 'react-router-dom';
 import { useCarrito } from '../context/CarritoContext';
 
@@ -45,28 +43,13 @@ export function Carrito() {
                 <p className="text-sm text-gray-500">{producto.precio.toFixed(2)} € / ud.</p>
               </div>
               <div className="flex items-center gap-2">
-                <button
-                  onClick={() => cambiarCantidad(producto.id, cantidad - 1)}
-                  className="w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100 font-bold"
-                >
-                  −
-                </button>
+                <button onClick={() => cambiarCantidad(producto.id, cantidad - 1)} className="w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100 font-bold">−</button>
                 <span className="w-6 text-center font-semibold">{cantidad}</span>
-                <button
-                  onClick={() => cambiarCantidad(producto.id, cantidad + 1)}
-                  className="w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100 font-bold"
-                >
-                  +
-                </button>
+                <button onClick={() => cambiarCantidad(producto.id, cantidad + 1)} className="w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100 font-bold">+</button>
               </div>
               <div className="text-right">
                 <p className="font-bold text-gray-900">{(producto.precio * cantidad).toFixed(2)} €</p>
-                <button
-                  onClick={() => eliminarProducto(producto.id)}
-                  className="text-xs text-red-400 hover:underline"
-                >
-                  Eliminar
-                </button>
+                <button onClick={() => eliminarProducto(producto.id)} className="text-xs text-red-400 hover:underline">Eliminar</button>
               </div>
             </div>
           ))}
@@ -87,9 +70,12 @@ export function Carrito() {
             <span>Total</span>
             <span>{totalPrecio.toFixed(2)} €</span>
           </div>
-          <button className="w-full mt-6 bg-green-700 hover:bg-green-800 text-white font-bold py-3 rounded-lg transition-colors">
+          <Link
+            to="/checkout"
+            className="block w-full mt-6 bg-green-700 hover:bg-green-800 text-white font-bold py-3 rounded-lg transition-colors text-center"
+          >
             Finalizar compra
-          </button>
+          </Link>
         </div>
       </div>
     </div>

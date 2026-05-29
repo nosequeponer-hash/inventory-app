@@ -21,7 +21,7 @@ export function Home() {
       {/* Hero */}
       <div className="bg-gradient-to-r from-green-700 to-green-500 text-white py-16 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Bienvenido a Mercabuena 🛒</h1>
-        <p className="text-xl mb-8 text-green-100">Tu supermercado online. Productos frescos, precios justos.</p>
+        <p className="text-xl mb-8 text-green-100">Tu super desde casa. Productos frescos y precios justos, de verdad.</p>
         <Link
           to="/productos"
           className="bg-white text-green-700 font-bold px-8 py-3 rounded-full hover:bg-green-50 transition-colors"

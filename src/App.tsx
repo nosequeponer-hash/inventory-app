@@ -1,6 +1,4 @@
 // src/App.tsx
-// Configuración de rutas de la aplicación.
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CarritoProvider } from './context/CarritoContext';
 import { Header } from './components/Header';
@@ -9,6 +7,8 @@ import { Home } from './pages/Home';
 import { Productos } from './pages/Productos';
 import { DetalleProducto } from './pages/DetalleProducto';
 import { Carrito } from './pages/Carrito';
+import { Checkout } from './pages/Checkout';
+import { Trabaja } from './pages/Trabaja';
 import { NotFound } from './pages/NotFound';
 
 function App() {
@@ -23,6 +23,8 @@ function App() {
               <Route path="/productos" element={<Productos />} />
               <Route path="/productos/:id" element={<DetalleProducto />} />
               <Route path="/carrito" element={<Carrito />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/trabaja" element={<Trabaja />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
